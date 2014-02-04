@@ -50,9 +50,9 @@ void drawscene(){
 void mousepress(int button, int state, int x, int y){
   if(button==GLUT_RIGHT_BUTTON && state==GLUT_DOWN)
     exit(0);
-  else if(button==GLUT_LEFT_BUTTON && state==GLUT_DOWN){
-    drawscene();
-  }
+  //else if(button==GLUT_LEFT_BUTTON && state==GLUT_DOWN){
+  //  drawscene();
+  //}
 }
 
 
