@@ -10,9 +10,9 @@ GLfloat vertexarray[]={1.0f,-1.0f,0.0f,//vertice array
                        };
                        
 GLfloat colorarray[]={1.0f,0.0f,0.0f,0.0f,//color array
-                       1.0f,0.0f,0.0f,0.0f,
-                       1.0f,0.0f,0.0f,0.0f,
-                       1.0f,0.0f,0.0f,0.0f
+					   1.0f,1.0f,0.0f,0.0f,
+                       0.0f,1.0f,0.0f,0.0f,
+                       0.0f,0.0f,1.0f,0.0f
                        };                       
 
 void init(){
@@ -59,7 +59,7 @@ void mousepress(int button, int state, int x, int y){
 int main(int argc,char ** argv){
 
   glutInit(&argc, argv);
-  glutCreateWindow("Shapes");//creates the window with the specified name
+  glutCreateWindow("Gradient Cube");//creates the window with the specified name
   
   //initializes glew
   glewExperimental=GL_TRUE;
