@@ -1,0 +1,3 @@
+Dominic DeMarco
+A shader is loaded from text using glShaderSource, then compiled using glCompileShader
+The shader is then returned into glUseProgram, to link the shader to the executable on compilation

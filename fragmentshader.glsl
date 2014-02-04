@@ -5,4 +5,5 @@ out vec4 out_color;
 
 void main(){
   out_color=pass_color;
+
 }

@@ -1,27 +1,18 @@
 #include "initShaders.h"
 using namespace std;
-int counter=0;//counter to increase how many vertices are going to be drawn at a given time
 
 GLuint vaoID, vboID[2];//vao and vbo names
 
-GLfloat vertexarray[]={0.5f,0.5f,0.0f,//vertice array
-			1.0f,0.0f,0.0f,
-                       0.5f,-0.5f,0.0f, 
-                       0.0f,-1.0f,0.0f,
-                       -0.5f,-0.5f,0.0f, 
-                        -1.0f,0.0f,0.0f,
-                       -0.5f,0.5f,0.0f,
-                      	0.0f,1.0f,0.0f
+GLfloat vertexarray[]={1.0f,-1.0f,0.0f,//vertice array
+					   1.0f,1.0f,0.0f,
+                       -1.0f,1.0f,0.0f, 
+                       -1.0f,-1.0f,0.0f,
                        };
                        
-GLfloat colorarray[]={1.0f,1.0f,0.0f,1.0f,//color array
-                       0.0f,1.0f,0.0f,1.0f,
-                       1.0f,0.0f,1.0f,1.0f,
-                       0.5f,0.5f,1.0f,1.0f,
-                       1.0f,0.5f,0.5f,1.0f,
-                       0.0f,1.0f,0.5f,1.0f,
-                       0.5f,0.5f,0.5f,1.0f,
-                       1.0f,0.5f,1.0f,1.0f
+GLfloat colorarray[]={1.0f,0.0f,0.0f,0.0f,//color array
+                       1.0f,0.0f,0.0f,0.0f,
+                       1.0f,0.0f,0.0f,0.0f,
+                       1.0f,0.0f,0.0f,0.0f
                        };                       
 
 void init(){
@@ -52,7 +43,7 @@ void init(){
 
 void drawscene(){
   glClear(GL_COLOR_BUFFER_BIT);
-  glDrawArrays(GL_POLYGON,0,3+(counter%6));
+  glDrawArrays(GL_POLYGON,0,4);
   glFlush();
 }
 
@@ -60,7 +51,6 @@ void mousepress(int button, int state, int x, int y){
   if(button==GLUT_RIGHT_BUTTON && state==GLUT_DOWN)
     exit(0);
   else if(button==GLUT_LEFT_BUTTON && state==GLUT_DOWN){
-    counter++;
     drawscene();
   }
 }
